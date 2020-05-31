@@ -102,7 +102,7 @@ def main(_argv):
 
         img = cv2.cvtColor(img_raw.numpy(), cv2.COLOR_RGB2BGR)
         img = draw_outputs(img, (boxes, scores, classes, nums), class_names)
-        cv2.imwrite(name, img)
+        cv2.imwrite('images/' + name, img)
         
         frame = frame + 1
 

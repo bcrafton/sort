@@ -1,0 +1,25 @@
+
+#####################
+
+cd yolov3-tf2;
+
+# run yolo
+python detect.py --weights ./checkpoints/yolov3.tf 
+
+# this code:
+# 1) run through "ADL-Rundle-6" MOT15 scene.
+# 2) return "yolo-det.txt"
+
+#####################
+
+# move yolo-det.txt to the sort folder so we have our detections:
+cp yolo-det.txt ../sort/data/train/ADL-Rundle-6/det/det.txt ;
+
+#####################
+
+cd ../sort ;
+
+# run sort using yolo detections.
+python sort.py --display
+
+#####################
