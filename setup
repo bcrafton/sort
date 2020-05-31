@@ -1,0 +1,7 @@
+
+cd ./yolov3-tf2/data ;
+
+wget https://pjreddie.com/media/files/yolov3.weights -O data/yolov3.weights ;
+python convert.py --weights ./data/yolov3.weights --output ./checkpoints/yolov3.tf ;
+
+cd .. ;
