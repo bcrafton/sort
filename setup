@@ -1,7 +1,23 @@
 
-cd ./yolov3-tf2/data ;
+#####
 
+# get the yolo weights.
+
+cd yolov3-tf2 ;
 wget https://pjreddie.com/media/files/yolov3.weights -O data/yolov3.weights ;
 python convert.py --weights ./data/yolov3.weights --output ./checkpoints/yolov3.tf ;
 
-cd .. ;
+#####
+
+# run yolo, 
+# python detect.py --weights ./checkpoints/yolov3.tf 
+
+# it will run through the "ADL-Rundle-6" MOT15 scene.
+# then it will dump "yolo-det.txt"
+# you want to move this to:
+# ./sort/data/train/ADL-Rundle-6/det.txt
+
+# run sort,
+# python sort.py --display
+
+#####

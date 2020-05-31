@@ -28,7 +28,7 @@ flags.DEFINE_integer('num_classes', 80, 'number of classes in the model')
 
 def main(_argv):
 
-    load = LoadCOCO('/home/brian/Desktop/AP/2DMOT2015/train/ADL-Rundle-6')
+    load = LoadCOCO('../2DMOT2015/train/ADL-Rundle-6')
 
     physical_devices = tf.config.experimental.list_physical_devices('GPU')
     for physical_device in physical_devices:
