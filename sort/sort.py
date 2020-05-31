@@ -301,7 +301,7 @@ if __name__ == '__main__':
         total_frames += 1
 
         if(display):
-          fn = 'mot_benchmark/%s/%s/img1/%06d.jpg'%(phase, seq, frame)
+          fn = '../2DMOT2015/%s/%s/img1/%06d.jpg'%(phase, seq, frame)
           im =io.imread(fn)
           ax1.imshow(im)
           plt.title(seq + ' Tracked Targets')
